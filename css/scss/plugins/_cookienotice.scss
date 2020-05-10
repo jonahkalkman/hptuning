@@ -1,0 +1,26 @@
+#cookie-notice {
+    z-index: 1000;
+    box-shadow: 0px 5px 20px $color-shadow; 
+}
+
+#cookie-notice .cn-button {
+    margin-left: 10px !important;
+    background-color: #A3C4CE !important;
+    box-shadow: none !important;
+    color: white !important;
+    text-shadow: none !important;
+    border: none !important;
+    background-image: none !important; 
+}
+
+.cookie-notice-container {
+    max-width: 100% !important;
+    width: auto !important;
+} 
+
+#cn-notice-text {
+    @include media($tablet){
+        display: block !important;
+        margin-bottom: 10px !important;
+    }
+}

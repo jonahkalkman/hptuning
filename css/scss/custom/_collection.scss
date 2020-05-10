@@ -1,0 +1,7 @@
+.c-collection {
+    @include media($tablet) {
+        .c-button {
+            margin-right: 0px !important;
+        }
+    }
+}

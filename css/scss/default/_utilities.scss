@@ -1,0 +1,159 @@
+.u-boxshadow {
+    box-shadow: 0px 5px 40px $color-shadow !important;
+}
+
+.u-background {
+    &--main {
+        background-color: $color-branding--primary !important;
+    }
+
+    &--extra {
+        background-color: $color-branding--secondary !important; 
+    }
+        
+}
+
+.u-display {
+    &--block {
+        display: block !important;
+    }
+
+    &--block-inline {
+        display: inline-block !important; 
+
+        &--tablet {
+            @include media($tablet){
+                display: inline-block !important; 
+            }
+        }
+    }
+
+    &--flex {
+        display: flex !important; 
+
+        &-wrap {
+            &-mobile {
+                @include media($tablet){
+                    flex-wrap: wrap;  
+                }
+            }
+        }
+    }
+
+    &--none {
+        display: none !important;
+    } 
+}
+
+.u-position {
+    
+    &--static {
+        position: static !important;
+    }
+
+    &--relative {
+        position: relative !important;
+    }
+
+    &--absolute {
+        position: absolute !important;
+    }
+
+    &--fixed {
+        position: fixed !important;
+    }
+
+    &--unset {
+        position: unset !important;
+    }
+}
+
+.u-vertical-align {
+    &--sub {
+        vertical-align: sub !important;
+    }
+
+    &--bottom {
+        vertical-align: bottom !important;
+    }
+
+    &--baseline {
+        vertical-align: baseline !important;
+    }
+
+    &--middle {
+        vertical-align: middle !important;
+    }
+
+    &--top {
+        vertical-align: top !important;
+    }
+}
+
+.u-horizontal-align {
+    &--left {
+        text-align: left !important;
+    }
+
+    &--right {
+        text-align: right !important;
+    }
+
+    &--center {
+        text-align: center !important;
+    }
+}
+
+.u-visible {
+
+    &--show {
+        visibility: visible !important;
+    }
+
+    &--hide {
+        visibility: hidden !important;
+    }
+}
+
+.u-transition {
+    transition: all 0.5s !important;
+
+    &--slow {
+        transition: all 1s !important;
+    }
+}
+
+.u-overflow {
+    &-scroll {
+        overflow: scroll;
+
+        &--x {
+            overflow-x: scroll;
+        }
+        &--y {
+            overflow-y: scroll;
+        }
+    }
+    
+    &-auto {
+        overflow: auto;
+
+        &--x {
+            overflow-x: auto;
+        }
+        &--y {
+            overflow-y: auto;
+        }
+    }
+
+    &-hidden {
+        overflow: hidden;
+        
+        &--x {
+            overflow-x: hidden;
+        }
+        &--y {
+            overflow-y: hidden;
+        }
+    }
+}

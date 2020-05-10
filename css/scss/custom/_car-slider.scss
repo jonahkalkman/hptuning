@@ -1,0 +1,15 @@
+#car-slider {
+    .slider__item {
+        height: 400px;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.car-slider__previous {
+    left: -50px;
+}
+
+.car-slider__next {
+    right: -50px;
+}

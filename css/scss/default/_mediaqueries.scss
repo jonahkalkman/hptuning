@@ -1,0 +1,17 @@
+// Breakpoints
+$mobile-s:  320px;
+$mobile-m:  375px;
+$mobile-l:  425px;
+$tablet:    768px;
+$laptop:    1024px;
+$laptop-l:  1440px;
+
+// A simple mixin to create a mediaquery
+@mixin media( $maxquery ) {
+
+    // Only works with max-width
+    @media (max-width: #{$maxquery}){
+        @content;
+    }
+}
+ 

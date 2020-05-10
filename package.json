@@ -1,0 +1,40 @@
+{
+  "name": "wpsass",
+  "node": "8.0.0",
+  "version": "1.0.0",
+  "description": "Use Sass with WordPress, Node Script in SCSS flavour.",
+  "scripts": {
+    "gulp": "gulp",
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmadawais/WPSass.git"
+  },
+  "author": "Ahmad Awais",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ahmadawais/WPSass/issues"
+  },
+  "homepage": "https://github.com/ahmadawais/WPSass#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-latest": "^6.24.1",
+    "browser-sync": "^2.26.3",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1",
+    "node-sass": "^4.5.3",
+    "nodemon": "^1.11.0",
+    "webpack": "^4.31.0",
+    "webpack-stream": "^5.2.1"
+  },
+  "dependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "browsersync": "0.0.1-security",
+    "gulp-babel": "^8.0.0"
+  }
+}

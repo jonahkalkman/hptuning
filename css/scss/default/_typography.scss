@@ -1,0 +1,21 @@
+$font--primary: 'font--primary';
+$font--secondary: 'font--secondary'; 
+
+$font-size--xs: 12px;
+$font-size--s: 14px;
+$font-size--m: 18px;
+$font-size--l: 36px;
+$font-size--xl: 60px;
+$font-size--xxl: 80px;
+
+
+@font-face {
+    font-family: $font--primary;
+    src: url('../../fonts/montserrat-regular.woff'); 
+} 
+
+@font-face {
+    font-family: $font--secondary;  
+    src: url('../../fonts/montserrat-semibold.woff');  
+} 
+ 

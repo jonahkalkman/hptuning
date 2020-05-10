@@ -1,0 +1,81 @@
+* {  
+    box-sizing: border-box; 
+}
+
+html, body {
+    height: 100vh;
+    margin: 0;
+    color: $color-black;
+    font-family: $font--primary; 
+}
+
+main {
+    overflow-x: hidden;
+} 
+
+img {
+    max-width: 100%;
+    margin: 0;
+    height: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font--primary;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: $font-size--xxl;
+}
+
+h2 {
+    font-size: $font-size--l;  
+
+    @include media($tablet) {
+        font-size: 30px;
+    }
+}
+
+h3 {
+    font-size: $font-size--l;  
+}
+
+p, span {
+    font-weight: normal;
+    font-size: $font-size--m; 
+    margin: 0;
+    margin-bottom: 10px; 
+    padding: 0; 
+    line-height: 25px;
+}
+
+a {
+    color: $color-link;
+    text-decoration: underline;
+    transition: all 0.5s;
+
+    &:hover {
+        color: $color-link--hover; 
+        transition: all 0.5s; 
+    }
+}
+
+td, label, li, textarea, input {
+    font-family: $font--primary; 
+}
+
+hr {
+    max-width: 50%;
+    margin: 0;
+    background-color: $color-branding--primary;
+    height: 4px;
+    border: none;
+}
+
+button:focus {
+    outline:0;
+}
+
+

@@ -1,0 +1,61 @@
+.c-banner {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
+    padding-top: 80px; 
+    padding-bottom: 80px; 
+    margin-bottom: 80px;
+    position: relative;
+    margin-bottom: 100px;
+    background-color: $color-grey;
+
+    @include media($tablet){
+        padding-top: 40px; 
+        padding-bottom: 40px; 
+        margin-bottom: 40px;
+        background-attachment: scroll !important;
+
+        hr {
+            display: none;
+        }
+    }
+}
+
+.banner__title {
+    display: block;
+    margin-bottom: 5px;
+    color: $color-black;
+    font-size: $font-size--xxl;
+
+    @include media($tablet){
+        font-size: $font-size--l;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+.banner__text {
+    color: $color-black;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    font-family: $font--secondary;    
+    max-width: 70%;
+
+    @include media($tablet){
+        font-size: 15px;
+        line-height: 30px; 
+        max-width: 100%;
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+}
+
+.banner__previous {
+    left: 40px;
+}
+
+.banner__next {
+    right: 40px;
+}

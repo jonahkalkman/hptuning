@@ -1,0 +1,29 @@
+.c-hero {
+    display: flex;
+    align-items: center;
+    height: 80vh;
+    position: relative;
+
+    @include media($tablet) {
+        background-attachment: scroll !important; 
+        height: 70vh;
+
+        h2 {
+            font-size: 30px;
+        }
+
+        .c-button {
+            margin-bottom: 10px;
+            margin-right: 0px !important;
+        }
+    }
+    
+}
+
+.hero__logo {
+    margin-bottom: 10px;
+}
+
+.hero__title {
+    font-size: $font-size--l;  
+}

@@ -1,0 +1,52 @@
+.c-page {
+    padding: 2%;
+    background-color: $color-branding--primary;
+
+    &--white {
+        background-color: $color-white;
+        min-height: 60vh;
+    }
+
+    &--content {
+        padding-right: 10%;
+        overflow: auto;
+        p {
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: blue;
+            &:hover {
+                transform: none !important;
+                color: grey;
+            }
+        }
+
+        @include media($tablet){
+            padding-right: 5%;
+            padding-left: 5%;
+        }
+    }
+
+    &--archive {
+        @include media($tablet){
+            padding-right: 5%;
+            padding-left: 5%;
+        }
+    }
+
+    @include media($tablet){
+        padding-right: 5%;
+        padding-left: 5%;
+        padding-bottom: 5%;
+    }
+
+    .c-menu {
+        padding: 0%;
+    }
+}
+
+.page__header {
+    margin-top: 40px;
+    margin-bottom: 5px;
+}
