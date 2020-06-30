@@ -157,3 +157,11 @@
         }
     }
 }
+
+.u-text-justify {
+    text-align: justify;
+
+    @include media($tablet) {
+        text-align: initial;
+    }
+}

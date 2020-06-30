@@ -7,16 +7,17 @@
     z-index: 1;
     background-color: $color-white;
 
-    .c-menu {
-        padding-left: 50px;
-        padding-right: 50px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
-
     @include media($tablet){
         justify-content: center;
         position: relative; 
+
+        .container {
+            margin-top: 0 !important;
+        }
+
+        .row {
+            margin-bottom: 0px;
+        }
     }
 
     @include media($tablet){
@@ -43,17 +44,18 @@
 .header__title {
     text-align: center;
     display: block;
-    color: $color-black; 
+    color: $color-white;  
     transition: all 0.5s ease;
     font-size: $font-size--xxl;
     margin-left: 30px;
+
     @include media($tablet){
         font-size: 20px;
     }
 }
 
 .header__logo {
-    height: 50px;
+    height: 70px;
     transition: all 0.5s ease;
 
     @include media($tablet){
@@ -66,7 +68,6 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding-left: 40px;
 
     a {
         text-decoration: none;
@@ -74,6 +75,7 @@
     
     h1 {
         font-size: $font-size--l;
+        color: $color-white;
         font-weight: bold;
         padding: 0;
     }

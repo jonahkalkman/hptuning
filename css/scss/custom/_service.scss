@@ -1,0 +1,32 @@
+.c-service {
+    padding: 40px;
+    border-radius: 5px;
+    padding-bottom: 0px;
+
+    @include media($tablet) {
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+}
+
+.service__last {
+    @include media($tablet) {
+        margin-bottom: 0px;
+        padding: 0px;
+    } 
+}
+
+.service__icon {
+    margin-bottom: 20px;
+
+    @include media($tablet) {
+        margin-bottom: 5px;
+    }
+}
+
+.service__text {
+    margin-bottom: 0px;
+    font-size: $font-size--m;
+    color: $color-white;
+    font-family: $font--primary;
+}

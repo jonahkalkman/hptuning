@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 u-horizontal-align--center">
-                    <h2><?php echo get_sub_field('titel') ?></h2>
+                    <h2 class="hero__title"><?php echo get_sub_field('titel') ?></h2>
                 </div>
                 <div class="col-lg-12 u-horizontal-align--center u-margin-top--md">
                     <?php
@@ -27,9 +27,6 @@
                 </div>
             </div>
         </div>
-        <span class="arrow-down" js-hook-arrow-down >
-            <img src="https://xleasecars.jkwebsites.nl/wp-content/uploads/2020/02/arrow-down.png" alt="arrow-down">
-        </span>
     </section>
 <?php
     endwhile; endif; 

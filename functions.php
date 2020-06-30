@@ -1,12 +1,9 @@
 <?php
 	function boilerplate_script_enqueue(){
-		wp_enqueue_style('slick-carousel','https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css', array(),'1.0.0','all');
 		wp_enqueue_style('source-css', get_template_directory_uri() . '/build/css/source.css', array(),'1.0.0','all');
-		wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js', array('jquery'), true);
-		wp_enqueue_script('slick-carousel', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js', array(), true);
 		wp_enqueue_script('main-js', get_template_directory_uri() . '/build/js/bundle.js', array(), '1.0.0', true);
 	}
-	add_action('wp_enqueue_scripts','boilerplate_script_enqueue');
+	add_action('wp_enqueue_scripts', 'boilerplate_script_enqueue');
 
 	function boilerplate_theme_setup(){
 		add_theme_support('menus');	
@@ -27,28 +24,28 @@
 	});
 
 	// Create a custom post-type
-	function create_posttype() {
-		register_post_type(
-			'Cars',
-			array(
-				'labels' => array(
-					'name' => __( 'Cars' ),
-					'singular_name' => __( 'Car' )
-				),
-				'taxonomies' => array('category'),  
-				'public' => true,
-				'has_archive' => true,
-				'rewrite' => array('slug' => 'cars'),
-				'menu_position' => 4
-			));
-	}
-	add_action('init','create_posttype');
+	// function create_posttype() {
+	// 	register_post_type(
+	// 		'Cars',
+	// 		array(
+	// 			'labels' => array(
+	// 				'name' => __( 'Cars' ),
+	// 				'singular_name' => __( 'Car' )
+	// 			),
+	// 			'taxonomies' => array('category'),  
+	// 			'public' => true,
+	// 			'has_archive' => true,
+	// 			'rewrite' => array('slug' => 'cars'),
+	// 			'menu_position' => 4
+	// 		));
+	// }
+	// add_action('init','create_posttype');
 
 	// Add Featured Image for Custom post-type
-	function add_featured_image_support() {
-		add_post_type_support('cars', 'thumbnail'); 
-	}
-	add_action('init', 'add_featured_image_support');
+	// function add_featured_image_support() {
+	// 	add_post_type_support('cars', 'thumbnail'); 
+	// }
+	// add_action('init', 'add_featured_image_support');
 
 	// Remove links from admin menu
 	function remove_from_admin() {	
@@ -123,29 +120,29 @@
 	}
 	add_action( 'admin_init', 'wpse_136058_remove_menu_pages' );
 
-	if (function_exists('acf_add_options_page')) {
-		acf_add_options_sub_page(array(
-			'page_title' 	=> 'Cars',
-			'menu_title'	=> 'Archive Cars',
-			'parent_slug'	=> 'edit.php?post_type=cars',
-		));	
+	// if (function_exists('acf_add_options_page')) {
+	// 	acf_add_options_sub_page(array(
+	// 		'page_title' 	=> 'Cars',
+	// 		'menu_title'	=> 'Archive Cars',
+	// 		'parent_slug'	=> 'edit.php?post_type=cars',
+	// 	));	
 
-		acf_add_options_sub_page(array(
-			'page_title' 	=> 'Contactgegevens',
-			'menu_title'	=> 'Contactgegevens',
-			'parent_slug'	=> 'edit.php?post_type=page',
-		));	
-	}
+	// 	acf_add_options_sub_page(array(
+	// 		'page_title' 	=> 'Contactgegevens',
+	// 		'menu_title'	=> 'Contactgegevens',
+	// 		'parent_slug'	=> 'edit.php?post_type=page',
+	// 	));	
+	// }
 
-	add_filter('pre_get_posts', 'query_post_type');
-	function query_post_type($query) {
-		if(is_category()) {
-			$post_type = get_query_var('post_type');
-			if($post_type)
-				$post_type = $post_type;
-			else
-				$post_type = array('nav_menu_item', 'post', 'cars');
-			$query->set('post_type',$post_type);
-			return $query;
-		}
-	}
+	// add_filter('pre_get_posts', 'query_post_type');
+	// function query_post_type($query) {
+	// 	if(is_category()) {
+	// 		$post_type = get_query_var('post_type');
+	// 		if($post_type)
+	// 			$post_type = $post_type;
+	// 		else
+	// 			$post_type = array('nav_menu_item', 'post', 'cars');
+	// 		$query->set('post_type',$post_type);
+	// 		return $query;
+	// 	}
+	// }

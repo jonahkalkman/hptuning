@@ -1,11 +1,36 @@
 footer {
-    padding: 50px 50px 20px 50px;
-    color: $color-white; 
-    background-color: black;
+    color: $color-black; 
+    background-color: $color-white;
+
+    p {
+        font-size: $font-size--s;
+    }
+
+    .row:first-child {
+        margin-top: 30px;
+    }
+
+    .row:last-child {
+        margin-bottom: 30px;
+    }
 
     @include media($tablet) {
-        padding-left: 30px;
-        padding-right: 30px;
+        .footer__logo, .footer__item, .footer__copyright {
+            text-align: center;
+        }
+    }
+}
+
+.footer__title {
+    font-family: $font--primary;
+}
+
+.footer__logo {
+    @include media($tablet) {
+        display: block;
+        margin: 0 auto; 
+        margin-bottom: 20px;
+        width: 150px;
     }
 }
 
@@ -22,9 +47,10 @@ footer {
     display: inline-block;
     margin-right: 15px;
     font-size: $font-size--s;
+    margin-bottom: 0px;
 
     a {
-        color: $color-white;
+        color: $color-black;
         text-decoration: none;
     }
 
@@ -56,19 +82,8 @@ footer {
 
 .footer__item {
 
-    span {
-        display: block;
-        font-size: 25px;
-        margin-bottom: 10px;
-    }
-
     @include media($tablet) {
-        width: 100%;
-        margin-top: 40px;
-
-        &:first-child {
-            margin-top: 0px;
-        }
+        margin-bottom: 20px; 
     }
 }
 
@@ -85,12 +100,12 @@ footer {
 
     li {
         margin-bottom: 10px;
-        color: $color-white;
+        color: $color-black;
         font-size: $font-size--m;
     }
 
     a {
-        color: $color-white;
+        color: $color-black;
         font-size: $font-size--s;
         text-decoration: none;
     }

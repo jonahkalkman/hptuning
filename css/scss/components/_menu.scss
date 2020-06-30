@@ -5,6 +5,13 @@
     margin: 0;
     padding: 0;
     position: relative;
+
+    .menu--top {
+        li {
+            font-size: $font-size--s; 
+        }
+    }
+
     @include media($tablet){
         display: none;
     }
@@ -47,11 +54,29 @@
             margin-right: 10px;
         }
     }
+
+    &.menu--main {
+        li {
+            font-size: $font-size--s;
+            font-family: $font--primary;  
+        }
+    }
+
+    &.menu--footer {
+        padding: 0;
+        margin: 0;
+        li {
+            display: block;
+            margin: 0;
+            margin-bottom: 10px;
+            font-size: $font-size--s;
+            font-family: $font--secondary;  
+        }
+    }
 }
 
 .menu__icon {
     display: none;
-    padding-top: 20px;
 
     svg path {
         fill: $color-black;
@@ -66,10 +91,6 @@
         width: 30px;
         height: 30px; 
     }
-
-    @include media($mobile-m - 1){
-        right: 10px;
-    }
 }
 
 .menu--mobile {
@@ -77,9 +98,10 @@
     height: 100vh;
     width: 100%;
     top: 0px;
-    z-index: 2; 
-    position:fixed;
-    background-color: $color-black; 
+    left: 0;
+    z-index: 5; 
+    position: fixed;
+    background-color: $color-branding--secondary; 
 
     ul {
         padding: 0;
@@ -109,8 +131,20 @@
         font-size: $font-size--m + 10px;
         margin-bottom: 20px;
         margin-top: 20px;
-        color: black;
+        color: $color-white;
         list-style: none;
+    }
+
+    a:first-child {
+        li {
+            margin-top: 0px;
+        }
+    }
+
+    a:last-child {
+        li {
+            margin-bottom: 0px;
+        }
     }
 }
 
