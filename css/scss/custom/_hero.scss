@@ -54,17 +54,23 @@
 }
 
 #overons {
-    .overons__text {
-        padding-right: 40px;
+
+    .overons__image {
+        padding-left: 30px;
     }
 
     @include media($tablet) {
+        .overons__image {
+            padding-left: 0px;
+            margin-top: 30px;
+        }
+
         .overons__text {
             padding-right: 0px;
         }
 
         h2, p {
-            text-align: center;
+            text-align: center !important;
         }
     }
 }

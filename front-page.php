@@ -48,7 +48,7 @@
                 <p class="overons__text u-text-justify"><?php echo $cfs->get('about_us_tekst', 5); ?></p>
             </div>
             <div class="col-lg-6 col-md-6 u-horizontal-align--left">
-                <img class="u-vertical-align--middle" src="<?php echo $cfs->get('about_us_afbeelding', 5); ?>" alt="">
+                <img class="overons__image u-vertical-align--middle" src="<?php echo $cfs->get('about_us_afbeelding', 5); ?>" alt="">
             </div>
         </div>
     </div>

@@ -1883,14 +1883,17 @@ div.wpcf7 .ajax-loader {
       margin-top: 20px;
       margin-left: 0px !important; } }
 
-#overons .overons__text {
-  padding-right: 40px; }
+#overons .overons__image {
+  padding-left: 30px; }
 
 @media (max-width: 768px) {
+  #overons .overons__image {
+    padding-left: 0px;
+    margin-top: 30px; }
   #overons .overons__text {
     padding-right: 0px; }
   #overons h2, #overons p {
-    text-align: center; } }
+    text-align: center !important; } }
 
 .c-notfound {
   min-height: 80vh;
