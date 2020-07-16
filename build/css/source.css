@@ -2064,7 +2064,8 @@ div.wpcf7 .ajax-loader {
 .c-service {
   padding: 40px;
   border-radius: 5px;
-  padding-bottom: 0px; }
+  padding-bottom: 0px;
+  text-align: center; }
   @media (max-width: 768px) {
     .c-service {
       margin-bottom: 20px;
@@ -2086,3 +2087,5 @@ div.wpcf7 .ajax-loader {
   font-size: 18px;
   color: #ffffff;
   font-family: "font--primary"; }
+  .service__text.text--extra {
+    font-size: 14px; }

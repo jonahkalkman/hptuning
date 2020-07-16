@@ -2,6 +2,7 @@
     padding: 40px;
     border-radius: 5px;
     padding-bottom: 0px;
+    text-align: center;
 
     @include media($tablet) {
         margin-bottom: 20px;
@@ -29,4 +30,8 @@
     font-size: $font-size--m;
     color: $color-white;
     font-family: $font--primary;
+
+    &.text--extra {
+        font-size: $font-size--s;
+    }
 }

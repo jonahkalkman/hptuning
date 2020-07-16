@@ -24,19 +24,40 @@
             </div>
         </div>
         <div class="row">
-            <?php 
-                $services = $cfs->get('service');
-                foreach ($services as $service) {
-            ?>
-                <div class="col-lg-4 col-md-4 u-horizontal-align--center">
-                    <div class="c-service">
-                        <img class="service__icon" src="<?php echo $service["service_icon"]; ?>" alt="" width="40" height="40">
-                        <p class="service__text"><?php echo $service["service_titel"]; ?></p>
-                    </div>
+            <div class="col-lg-4 col-md-4">
+                <div class="c-service">
+                    <img class="service__icon" src="<?php echo $cfs->get('eerste_dienst_icoon', 5); ?>" alt="" width="40" height="40">
+                    <p class="service__text"><?php echo $cfs->get('eerste_dienst_titel', 5); ?></p>
                 </div>
-            <?php
-                }
-            ?>
+                <div class="c-service">
+                    <img class="service__icon" src="<?php echo $cfs->get('tweede_dienst_icoon', 5); ?>" alt="" width="40" height="40">
+                    <p class="service__text"><?php echo $cfs->get('tweede_dienst_titel', 5); ?></p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <div class="c-service">
+                    <img class="service__icon" src="<?php echo $cfs->get('derde_dienst_icoon', 5); ?>" alt="" width="40" height="40">
+                    <p class="service__text"><?php echo $cfs->get('derde_dienst_titel', 5); ?></p>
+                    <?php 
+                        $services = $cfs->get('extra_diensten');
+                        foreach ($services as $service) {
+                    ?>
+                        <p class="service__text text--extra"><?php echo $service["dienst"]; ?></p>
+                    <?php
+                        }
+                    ?>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <div class="c-service">
+                    <img class="service__icon" src="<?php echo $cfs->get('vierde_dienst_icoon', 5); ?>" alt="" width="40" height="40">
+                    <p class="service__text"><?php echo $cfs->get('vierde_dienst_titel', 5); ?></p>
+                </div>
+                <div class="c-service">
+                    <img class="service__icon" src="<?php echo $cfs->get('vijfde_dienst_icoon', 5); ?>" alt="" width="40" height="40">
+                    <p class="service__text"><?php echo $cfs->get('vijfde_dienst_titel', 5); ?></p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
