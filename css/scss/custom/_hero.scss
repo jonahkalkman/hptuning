@@ -1,6 +1,7 @@
 .c-hero {
-    height: 75vh;
     position: relative;
+    height: 75vh;
+    // margin-top: 114px;
 
     &::after {
         position: absolute;
@@ -9,68 +10,29 @@
         height: 100%;
         background-color: $color-black;
         content: '';
-        opacity: 0.5;
-    }
-
-    .c-banner {
-        position: absolute;
-        z-index: 1;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+        opacity: 0.3;
     }
 
     @include media($tablet) {
-        background-attachment: scroll !important;
+        max-height: 30vh;
     }
 }
 
-.hero__logo {
-    margin-bottom: 10px;
+.hero__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+    color: white;
 }
 
-.hero__title {
-    color: $color-white;
-}
-
-.hero__buttons {
-
-    a:last-child {
-        color: $color-white;
-    }
+.hero__slider {
+    max-height: 75vh;
 
     @include media($tablet) {
-        flex-direction: column;
-
-        a:last-child {
-            margin-top: 20px;
-            margin-left: 0px !important;
-        }
-    }
-}
-
-#overons {
-
-    .overons__image {
-        padding-left: 30px;
-    }
-
-    @include media($tablet) {
-        .overons__image {
-            padding-left: 0px;
-            margin-top: 30px;
-        }
-
-        .overons__text {
-            padding-right: 0px;
-        }
-
-        h2, p {
-            text-align: center !important;
-        }
+        max-height: 30vh;
     }
 }

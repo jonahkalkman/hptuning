@@ -1,0 +1,41 @@
+.c-intro {
+
+}
+
+.intro__content {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+
+    @include media($tablet) {
+        margin-bottom: 0px;
+    }
+}
+
+.intro__counter {
+    margin: 0 auto;
+    vertical-align: middle;
+    margin-top: 10px;
+
+    @include media($tablet) {
+        margin-top: 20px;
+    }
+}
+
+.counter__image {
+    display: block;
+    margin: 0 auto;
+    height: 70px;
+}
+
+.counter__value {
+    display: inline-block;
+    margin-bottom: 0px;
+    vertical-align: middle;
+    vertical-align: middle;
+    font-size: $font-size--xl;  
+    width: 100px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    text-align: center;
+}

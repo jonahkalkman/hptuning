@@ -1,2 +1,2 @@
-# TD Elektro WP Theme
-A WordPress theme for TD Elektro
+# HP Tuning WP Theme
+A WordPress theme for HP Tuning

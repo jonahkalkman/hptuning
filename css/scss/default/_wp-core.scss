@@ -139,3 +139,29 @@ a img.aligncenter {
 	z-index: 100000;
 	/* Above WP toolbar. */
 }
+
+.wp-block-spacer {
+    @include media($tablet) {
+        display: none;
+    }
+} 
+
+.wp-block-image .alignleft {
+    @include media($tablet) {
+        float: none;
+        margin: 0;
+    }
+}
+
+.wp-block-image .alignright {
+    @include media($tablet) {
+        float: none;
+        margin: 0;
+    }
+}
+
+.wp-block-column {
+    @include media($tablet) {
+        text-align: center;
+    }
+}

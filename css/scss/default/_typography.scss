@@ -4,18 +4,18 @@ $font--secondary: 'font--secondary';
 $font-size--xs: 12px;
 $font-size--s: 14px;
 $font-size--m: 18px;
-$font-size--l: 36px;
-$font-size--xl: 60px;
+$font-size--l: 24px;
+$font-size--xl: 36px;
 $font-size--xxl: 80px;
 
 
 @font-face {
     font-family: $font--primary;
-    src: url('../../fonts/montserrat-semibold.woff'); 
+    src: url('../../fonts/Raleway-VariableFont_wght.ttf'); 
 } 
 
 @font-face {
     font-family: $font--secondary;  
-    src: url('../../fonts/montserrat-regular.woff');  
+    src: url('../../fonts/Raleway-VariableFont_wght.ttf'); 
 } 
  

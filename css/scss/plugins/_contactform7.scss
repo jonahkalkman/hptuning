@@ -1,27 +1,29 @@
 .wpcf7 {
     width: 100%;
     display: inline-block;
-    text-align: left;
+    text-align: center;
 
     input[type=submit] {
         display: block;
         -webkit-appearance: none;
-        background-color: $color-branding--primary;
-        color: $color-white;
         font-size: $font-size--s;
         border: solid 3px $color-branding--primary; 
-        padding: 15px 25px;
+        background-color: $color-branding--primary;
+        padding: 15px 30px;
         display: inline-block;
-        border-radius: 5px;
-        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 100px;
         transition: all 0.5s ease;  
         text-decoration: none;
-
+        -webkit-appearance: none;
+        font-variation-settings: 'wght' 800;
+        text-transform: uppercase; 
+        color: white;
+    
         &:hover {
-            color: $color-white;
-            transform: translateY(2px);
+            background-color: white;
+            color: $color-branding--primary;
             cursor: pointer;
-        } 
+        }
     }
 
     p label {
@@ -35,21 +37,42 @@
 
 .wpcf7-form {
     display: flex;
-    flex-direction: column;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #ececec;
+    padding: 20px;
+    border-radius: 5px;
 
     p {
         display: inline-block;
         font-family: $font--secondary;
+        width: 50%;
+        padding-right: 10px;
+        padding-left: 10px;
+        max-height: 60px;
 
-        &:nth-child(4) {
+        &:nth-child(6) {
             display: block;
+            width: 100%;
+            max-height: 300px;
+        }
+
+        &:nth-child(7) {
+            display: block;
+            width: 100%;
+            padding-right: 0px;
+        }
+
+        @include media($tablet) {
+            width: 100%;
+            max-height: 50px;
         }
     }
 
     .wpcf7-form-control.wpcf7-text {
         display: inline-block;
-        width: 40%;
 
         @include media($tablet){
             width: 100%;
@@ -58,7 +81,8 @@
 
     .wpcf7-form-control.wpcf7-textarea {
         display: block;
-        width: 50%; 
+        width: 100%; 
+        height: 200px;
 
         @include media($tablet){
             width: 100%;
@@ -69,13 +93,14 @@
 
 .wpcf7-form-control-wrap {
     input {
-        width: 50%;
+        width: 100%;
         padding: 0px;
         padding: 10px;
         color: $color-black;
         font-size: 16px;
-        border: solid 1px black;
+        border: solid 2px #F8F8F8;
         margin-bottom: 5px;
+        border-radius: 5px;
 
         @include media($tablet){
             width: 100%;
@@ -90,8 +115,9 @@
         width: 100%;
         color: $color-black;        
         font-size: 16px;
-        border: solid 1px black;
+        border: solid 2px #F8F8F8;
         margin: 0 auto;
+        border-radius: 5px;
     }
 }
 

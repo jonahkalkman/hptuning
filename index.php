@@ -1,57 +1,39 @@
 <?php 
     get_header();
 ?>
-    <div class="archive__banner">
-        <div class="row" style="margin-top: 0px;">
+    <section class="page__hero">
+        <div class="row" style="margin-top: 0px; margin-bottom: 0px;">
             <div class="col-lg-12 u-horizontal-align--center">
-                <section class="c-banner" style="background: url('<?php the_post_thumbnail_url(); ?>') no-repeat center center; background-size: cover;">
-                    <h2><?php echo single_post_title() ?></h2>
+                <section class="c-banner" style="background: url('<?php the_post_thumbnail_url(); ?>') rgba(36, 36, 36, 0.3) no-repeat center center; background-size: cover; background-blend-mode: multiply;">
+                    <h2 class="page__title"><?php echo single_post_title() ?></h2>
                 </section>
             </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="row align--center">
-            <div class="col-lg-6">
-                <img src="<?php echo get_field('afbeelding')['url']; ?>" alt="<?php echo get_field('afbeelding')['alt']; ?>">
-            </div>
-            <div class="col-lg-6">
-                <p><?php echo the_field('tekst'); ?></p>
-            </div>
-        </div>
-    </div>
-    <div class="archive__banner">
-        <div class="row" style="margin-bottom: 0;">
-            <div class="col-lg-12 u-horizontal-align--center">
-                <?php 
-                    if(have_rows('andere_auto', 'option')): while(have_rows('andere_auto', 'option')): the_row();  
-                ?>
-                    <section class="c-banner" style="margin-bottom: 0; background: url('<?php echo get_sub_field('achtergrond')['url']; ?>') no-repeat center center; background-size: cover;">
-                        <div class="container" style="margin-top: 0px; margin-bottom: 0px;">
-                            <div class="row align--center">
-                                <div class="col-lg-9 u-horizontal-align--left">
-                                    <h2 class="u-margin-bottom--sm"><?php the_sub_field('titel'); ?></h2>
-                                    <p><?php the_sub_field('ondertitel'); ?></p>
-                                </div>
-                                <div class="col-lg-3 u-horizontal-align--left">
-                                    <?php
-                                        $button = get_sub_field('button');	
-                                        if($button): while(have_rows('button')): the_row(); 
-                                    ?>
-                                        <a class="c-button u-margin-right--lg" href="<?php the_sub_field('link'); ?>"><?php the_sub_field('titel'); ?></a>
-                                    <?php
-                                        endwhile; endif; 
-                                    ?>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                <?php  
-                    endwhile; endif; 
-                ?>
+    </section>
+    <section class="page__content" style="background: url('<?php echo wp_upload_dir()['baseurl']; ?>/2020/08/dwad.png') no-repeat center center; background-size: cover;">
+        <div class="container">
+            <div class="row align--center">
+                <div class="col-lg-12">
+                    <?php
+                        if (have_posts()): while (have_posts()):
+                        the_post();
+                            the_content();
+                        endwhile; endif;
+                    ?>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+    <section class="c-banner" style="background-color: #056839;">
+        <div class="container">
+            <div class="row" style="display: flex; justify-content: center;">
+                <div class="col-lg-8 u-horizontal-align--center">
+                    <h2 class="banner__title">Interested in our services? Feel free to contact us for a non-binding offer</h2>
+                    <a href="<?php echo get_bloginfo('wpurl'); ?>/contact" class="c-button button--third">Contact us</a>
+                </div>
+            </div>
+        </div>
+    </section>
 <?php
     get_footer(); 
 ?>

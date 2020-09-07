@@ -17,18 +17,7 @@
         <meta name="theme-color" content="#4584FF"/>
         <?php wp_head(); ?>
     </head>
-    <body <?php body_class(); ?> >
-        <a class="fixed-button fixed-button--secondary" href="tel:<?php echo $cfs->get('header_telefoonnummer', 5); ?>">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 384" width="14" height="14">
-                <path d="M353.188 252.052c-23.51 0-46.594-3.677-68.469-10.906-10.719-3.656-23.896-.302-30.438 6.417l-43.177 32.594c-50.073-26.729-80.917-57.563-107.281-107.26l31.635-42.052c8.219-8.208 11.167-20.198 7.635-31.448-7.26-21.99-10.948-45.063-10.948-68.583C132.146 13.823 118.323 0 101.333 0h-70.52C13.823 0 0 13.823 0 30.813 0 225.563 158.438 384 353.188 384c16.99 0 30.813-13.823 30.813-30.813v-70.323c-.001-16.989-13.824-30.812-30.813-30.812z" data-original="#000000" class="active-path" data-old_color="#000000" fill="white"/>
-            </svg>
-        </a>
-        <a class="fixed-button" href="mailto:<?php echo $cfs->get('header_mailadres', 5); ?>">
-            <svg style="vertical-align: top;" xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 511.996 511.996" width="14">
-                <path d="M230.9 253.371c13.369 8.913 36.827 8.914 50.199-.001l.007-.004 227.865-151.911c-7.474-21.616-28.018-37.188-52.142-37.188H55.166c-24.125 0-44.668 15.572-52.143 37.188l227.87 151.912.007.004z" data-original="#000000" class="active-path" data-old_color="#000000" fill="white"/>
-                <path d="M297.746 278.328l-.007.005c-11.702 7.801-26.724 11.702-41.741 11.702-15.02 0-30.036-3.9-41.739-11.703l-.005-.003L0 135.494v257.072c0 30.417 24.747 55.163 55.166 55.163h401.666c30.418 0 55.164-24.746 55.164-55.163V135.494z" data-original="#000000" class="active-path" data-old_color="#000000" fill="white"/>
-            </svg>
-        </a>
+    <body <?php body_class(); ?>>
         <main id="content" role="main">  
             <div class="menu--mobile" js-hook-mobile-menu>
                 <div class="menu--mobile__icon" js-hook-close-button>
@@ -47,27 +36,32 @@
                 ?>
             </div> 
             <header class="c-header">
-                <div class="container" style="margin-top: 20px; margin-bottom: 0;">
-                    <div class="row" style="margin-top: 0;">
+                <div class="container" style="padding-top: 0px; padding-bottom: 0;">
+                    <div class="row">
                         <div class="col-lg-12">
                             <div class="header__menuwrapper">
-                                <a href="/"><img class="header__logo" src="<?php echo wp_upload_dir()['baseurl']; ?>/2020/05/TD-Elektro-1.png" alt=""></a>
-                                <div style="display: flex; align-items: flex-end; flex-direction: column;">
-                                    <ul class="c-menu menu--top u-margin-bottom--md" style="float: right;">
-                                        <li style="vertical-align: middle;">
-                                            <svg class="u-margin-right--xs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 384" width="14" height="14">
-                                                <path d="M353.188 252.052c-23.51 0-46.594-3.677-68.469-10.906-10.719-3.656-23.896-.302-30.438 6.417l-43.177 32.594c-50.073-26.729-80.917-57.563-107.281-107.26l31.635-42.052c8.219-8.208 11.167-20.198 7.635-31.448-7.26-21.99-10.948-45.063-10.948-68.583C132.146 13.823 118.323 0 101.333 0h-70.52C13.823 0 0 13.823 0 30.813 0 225.563 158.438 384 353.188 384c16.99 0 30.813-13.823 30.813-30.813v-70.323c-.001-16.989-13.824-30.812-30.813-30.812z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#699EA5"/>
-                                            </svg>
-                                            <a href="tel:<?php echo $cfs->get('header_telefoonnummer', 5); ?>"><?php echo $cfs->get('header_telefoonnummer', 5); ?></a>
-                                        </li>
-                                        <li style="vertical-align: middle; line-height: 14px;">
-                                            <svg class="u-margin-right--xs" style="vertical-align: top;" xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 511.996 511.996" width="14">
-                                                <path d="M230.9 253.371c13.369 8.913 36.827 8.914 50.199-.001l.007-.004 227.865-151.911c-7.474-21.616-28.018-37.188-52.142-37.188H55.166c-24.125 0-44.668 15.572-52.143 37.188l227.87 151.912.007.004z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#699EA5"/>
-                                                <path d="M297.746 278.328l-.007.005c-11.702 7.801-26.724 11.702-41.741 11.702-15.02 0-30.036-3.9-41.739-11.703l-.005-.003L0 135.494v257.072c0 30.417 24.747 55.163 55.166 55.163h401.666c30.418 0 55.164-24.746 55.164-55.163V135.494z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#699EA5"/>
-                                            </svg>
-                                            <a href="mailto:<?php echo $cfs->get('header_mailadres', 5); ?>"><?php echo $cfs->get('header_mailadres', 5); ?></a>
-                                        </li>
-                                    </ul>
+                                <a href="/">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="300" viewBox="0 0 35012 8534" xmlns:xlink="http://www.w3.org/1999/xlink" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd">
+                                        <defs>
+                                            <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="3254.38" y1="-1722.24" x2="7154.36" y2="9295.49">
+                                            <stop offset="0" stop-color="#bf272e"/>
+                                            <stop offset=".188" stop-color="#bf272e"/>
+                                            <stop offset=".329" stop-color="#e63a34"/>
+                                            <stop offset="1" stop-color="#bf272e"/>
+                                            </linearGradient>
+                                            <linearGradient id="id1" gradientUnits="userSpaceOnUse" xlink:href="#id0" x1="4913.59" y1="-3839.05" x2="9528.31" y2="9121.88"/>
+                                            <style>
+                                            .str0{stroke:#1f1b20;stroke-width:7.62179}.fil0{fill:#fefefe}
+                                            </style>
+                                        </defs>
+                                        <g id="Layer_x0020_1">
+                                            <path class="fil0 str0" d="M11100 2004h667l-597 2401h486l597-2401h653l103-409h-1805zM15099 2173l-368 1469c-65 262-153 378-500 378-117 0-193-21-225-62-35-45-36-135-2-275l379-1510h-487l-395 1580c-43 174-14 336 80 457 83 105 256 230 613 230 567 0 901-316 981-630l411-1637h-487zM18408 2173h-487l-313 1263-44 222-428-1485h-515l-556 2232h486l314-1260 43-217 428 1477h515zM20874 2173h-1167l-103 408h338l-350 1416h-338l-104 408h1167l104-408h-343l351-1416h342zM23959 2173h-486l-313 1263-44 222-428-1485h-515l-556 2232h486l313-1260 43-217 429 1477h515zM24641 3266c-68 275-105 657 99 918 133 170 346 256 632 256 258 0 595-95 839-237l31-18 262-1051h-1064l-104 408h579l-98 396c-128 54-267 82-403 82-120 0-204-32-256-99-86-110-96-325-27-605 72-284 255-759 681-759 176 0 304 82 380 244l38 79 448-222-34-75c-128-279-408-446-749-446-228 0-991 82-1254 1129zM10513 7663h486l420-1685 43-195 310 1880h528l699-2810h-486l-419 1688-44 191-309-1879h-528zM15669 5430h-1680l-557 2233h1680l104-409h-1195l139-561h985l103-408h-986l110-446h1194zM17461 5430h-872l-104 409h251l-351 1415h-249l-104 409h915c887 0 1163-411 1342-1122 101-406 82-679-58-858-135-172-379-253-770-253zm-239 409h252c163 0 263 31 315 97 75 97 75 290 0 592-151 607-370 726-698 726h-219l350-1415zM21221 5430h-1681l-556 2233h1680l104-409h-1195l138-561h986l103-408h-986l110-446h1194zM22279 5430l-556 2233h487l217-883h325l396 963 464-210-379-824c288-105 531-349 599-611 44-184 21-336-70-452-111-141-317-216-597-216h-886zm384 409h433c111 0 192 25 228 72 27 34 33 83 17 145-50 195-247 316-514 316h-297l133-533zM25639 5430h-487l-556 2233h1750l103-409h-1264zM28871 5430h-521l-1345 2150 449 151 390-630h732l72 638 496-144-273-2165zm-410 654l68 608h-437l369-608zM32287 5430h-486l-313 1264-45 222-427-1486h-515l-556 2233h486l313-1260 43-217 429 1477h515zM34116 5430h-871l-104 409h251l-351 1415h-250l-103 409h915c886 0 1163-411 1341-1122 43-171 64-319 64-446 0-174-40-309-121-412-135-172-380-253-771-253zm-238 409h252c162 0 262 31 315 97 75 97 75 290 0 592-151 607-371 726-699 726h-219l351-1415z"/>
+                                            <path d="M10391 0H1923c-210 0-388 154-417 362L4 8053c-2 18-4 37-4 55v10c2 226 187 416 422 416h8468c209 0 387-155 417-362l1501-7691c36-254-161-481-417-481zM5259 3563l507-2414h18l4-17h1835c517 0 945 114 1275 338 408 273 625 699 625 1231 0 118-14 247-42 383-131 613-466 1089-994 1416-452 276-1001 415-1633 415h-627l-540 2584h-18l-4 16H4420l598-2813H3212l-601 2813H1368l1345-6366h1252l-517 2414h1811z" fill="url(#id0)"/>
+                                            <path d="M6473 3640h115c494 0 860-44 1089-131 322-120 505-336 575-682 16-71 24-144 24-219v-7c0-176-54-309-320-389-113-31-384-71-1003-71h-168l-312 1499z" fill="url(#id1)"/>
+                                        </g>
+                                    </svg>
+                                </a>
+                                <div style="display: flex; align-items: center; flex-direction: row; vertical-align: middle;">
                                     <?php
                                         wp_nav_menu ( 
                                             array ( 

@@ -1,0 +1,57 @@
+.news__title {
+
+    &::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 50px;
+        left: 50%;
+        bottom: -26px;
+        transform: translateX(-50%);
+        background-color: $color-branding--primary;
+    }
+}
+
+.news__tumbnail {
+    border-radius: 10px;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+.news__readmore {
+    display: block;
+    color: $color-branding--primary;
+    text-decoration: none;
+    font-size: $font-size--m;
+    font-variation-settings: 'wght' 800;
+    margin-top: 30px; 
+
+    &:hover {
+        color: $color-branding--primary;
+
+        &::after {
+            margin-left: 15px;
+            transition: all 0.3s;
+        }
+    }
+
+    &::after {
+        content: '';
+        transition: all 0.3s;
+        display: inline-block;
+        margin-left: 10px;
+        vertical-align: middle;
+        background: url(http://greenlabel.jkwebsites.nl/wp-content/uploads/2020/08/arrow.png) no-repeat center center; 
+        background-size: cover;
+        height: 20px;
+        width: 30px;
+    }
+}
+
+.news__post-content {
+    @include media($tablet) {
+        text-align: center;
+        margin-top: 20px;
+    }
+}

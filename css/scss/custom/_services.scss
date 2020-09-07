@@ -1,0 +1,5 @@
+.c-services {
+    @include media($tablet) {
+        text-align: center;
+    }
+}

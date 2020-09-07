@@ -1,7 +1,7 @@
 // Generic styling
+@import 'default/_mediaqueries'; 
 @import 'default/_wp-core';
 @import 'default/_colors';
-@import 'default/_mediaqueries'; 
 @import 'default/_typography';
 @import 'default/_utilities';
 @import 'default/_default';
@@ -20,6 +20,7 @@
 @import 'components/_banner';
 @import 'components/_c-backtotop';
 @import 'components/_c-arrowdown';
+@import 'components/_news';
 
 // Plugin styling
 @import 'plugins/_contactform7';
@@ -29,10 +30,7 @@
 // Custom components
 @import 'custom/_hero';
 @import 'custom/_notfound'; 
-@import 'custom/_card';
-@import 'custom/_bar';
 @import 'custom/_single';
-@import 'custom/car-overview';
-@import 'custom/car-slider';
-@import 'custom/collection';
-@import 'custom/service';
+@import 'custom/_intro';
+@import 'custom/_services';
+@import 'custom/_contact';

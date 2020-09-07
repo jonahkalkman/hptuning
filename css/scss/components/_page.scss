@@ -46,7 +46,33 @@
     }
 }
 
-.page__header {
-    margin-top: 40px;
-    margin-bottom: 5px;
+.page__title {
+    color: $color-white;
+    font-size: $font-size--xxl;
+
+    @include media($tablet) {
+        font-size: $font-size--xl;
+    }
+}
+
+.page__hero {
+
+    .c-banner {
+        margin: 0 auto;
+        padding: 100px;
+
+        @include media($tablet) {
+            padding: 50px;
+        }
+    }
+}
+
+.page__news {
+    display: flex;
+    justify-content: center;
+
+    @include media($tablet) {
+        flex-wrap: wrap;
+        align-items: center;
+    }
 }

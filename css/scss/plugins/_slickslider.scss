@@ -1,77 +1,66 @@
-.slider__item {
-    width: 80% !important;
+.slick-slide img {
+    max-height: 75vh;
+    object-fit: cover;
+    width: 100%; 
+
+    @include media($tablet) {
+        max-height: 30vh;
+        min-height: 30vh;
+    }
+}
+
+.slick-slider {
+    position: relative;
 }
 
 .slick-arrow {
     position: absolute;
-    background: none;
-    border: none;
-    color: $color-black;
-    font-family: $font--primary;
-    font-size: $font-size--xxl; 
-    z-index: 1;
     top: 50%;
     transform: translateY(-50%);
-}
-
-.slick-dots {
-    position: absolute;
-    bottom: -25px;
-    display: block;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    text-align: center;
-}
-
-.slick-dots li {
-    position: relative;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin: 0 5px;
-    padding: 0;
-    cursor: pointer;
-}
-
-.slick-dots li button {
-    font-size: 0;
-    line-height: 0;
-    display: block;
-    width: 20px;
-    height: 20px;
-    padding: 5px;
-    cursor: pointer;
-    color: transparent;
-    border: 0;
-    outline: none;
-    background: transparent;
-}
-
-.slick-dots li button:before {
-    font-family: 'slick';
-    font-size: 50px;
-    line-height: 20px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    content: '•';
-    text-align: center;
-    opacity: .25;
-    color: $color-white;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-.slick-dots li.slick-active button:before {
-    opacity: 1;
-    color: $color-white;
-}
-
-.slick-dots {
-    display: none !important;
+    z-index: 2;
     visibility: hidden;
+    width: 50px;
+}
+
+.slick-prev {
+    display: none;
+    left: 0px;
+    
+    &::after {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        visibility: visible;
+        height: 20px;
+        width: 20px;
+        content: '';
+        // background-image: url(http://localhost:8888/patteri/wp-content/uploads/2020/04/Group-38.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain; 
+    }
+}
+
+.slick-next {
+    display: none;
+    right: 0px;
+
+
+    &::after {
+        display: none;
+        position: absolute;
+        top: 50%; 
+        left: 50%;
+        transform: translate(-50%,-50%);
+        visibility: visible;
+        height: 20px;
+        width: 20px;
+        content: '';
+        // background-image: url(http://localhost:8888/patteri/wp-content/uploads/2020/04/Group-2.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain; 
+    }
 }

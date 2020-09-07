@@ -1,17 +1,14 @@
 footer {
     color: $color-black; 
     background-color: $color-white;
+    border-top: solid 3px $color-branding--primary; 
 
     p {
         font-size: $font-size--s;
     }
 
-    .row:first-child {
-        margin-top: 30px;
-    }
-
-    .row:last-child {
-        margin-bottom: 30px;
+    a {
+        text-decoration: none;
     }
 
     @include media($tablet) {
@@ -23,6 +20,8 @@ footer {
 
 .footer__title {
     font-family: $font--primary;
+    font-variation-settings: 'wght' 800;
+    font-size: $font-size--m;
 }
 
 .footer__logo {
@@ -37,6 +36,9 @@ footer {
 .footer__copyright {
     display: flex;
     justify-content: space-between;
+    vertical-align: middle;
+    font-family: $font--secondary;
+    font-size: $font-size--s;
 
     @include media($tablet){
        flex-wrap: wrap;

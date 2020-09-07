@@ -31,7 +31,7 @@ gulp.task('babel', function() {
 
 gulp.task('serve', ['sass', 'babel'], function() {
 
-    const projectName = 'tdelektro';
+    const projectName = 'hptuning';
     
     browserSync.init({
         proxy: `http://localhost:8888/${projectName}`,

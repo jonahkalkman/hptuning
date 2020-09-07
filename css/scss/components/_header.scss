@@ -4,24 +4,22 @@
     align-items: flex-end;
     flex-direction: column; 
     width: 100%;
-    z-index: 1;
-    background-color: $color-white;
+    background-color: $color-black;
 
     @include media($tablet){
-        justify-content: center;
         position: relative; 
+        justify-content: center;
+        flex-wrap: wrap;
 
         .container {
             margin-top: 0 !important;
+            margin-bottom: 0 !important;
         }
 
         .row {
-            margin-bottom: 0px;
+            margin-top: 0;
+            margin-bottom: 0;
         }
-    }
-
-    @include media($tablet){
-        flex-wrap: wrap;
     }
 }
 
@@ -87,6 +85,10 @@
 
         h1 {
             font-size: $font-size--m;
+        }
+
+        .c-button {
+            display: none;
         }
     }
 }

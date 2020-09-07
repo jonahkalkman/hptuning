@@ -2,25 +2,39 @@
     margin-bottom: 20px;
 }
 
-.single__price {
-    font-size: $font-size--l;
-    font-weight: bold;
-    margin-bottom: 40px;
+.single__date {
+    color: white;
 }
 
-.single__usps {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.single__social-icon {
+    display: block;
+    height: 40px;
+    margin-bottom: 20px;
+
+    @include media($tablet) {
+        display: inline-block;
+        margin-bottom: 0px;
+        margin-right: 10px;
+    }
 }
 
-.single__table {
-    border-bottom: 1px solid $color-grey;
-    margin: 0;
-    padding: 0;
+.single__content {
+    @include media($tablet) {
+        display: flex;
+        flex-direction: column;
+    }
+}
 
-    p {
-        margin-top: 10px;
-        margin-bottom: 10px;
+.single__share {
+
+    @include media($tablet) {
+        order: 2;
+    }
+
+}
+
+.single__text {
+    @include media($tablet) {
+        order: 1;
     }
 }

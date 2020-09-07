@@ -1,5 +1,7 @@
 <?php
 	function boilerplate_script_enqueue(){
+		wp_enqueue_style('slick-carousel','https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css', array(),'1.0.0','all');
+		wp_enqueue_script('slick-carousel', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js', array(), true);
 		wp_enqueue_style('source-css', get_template_directory_uri() . '/build/css/source.css', array(),'1.0.0','all');
 		wp_enqueue_script('main-js', get_template_directory_uri() . '/build/js/bundle.js', array(), '1.0.0', true);
 	}
